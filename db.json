@@ -1,0 +1,22 @@
+{
+  "despesas": [
+    {
+      "id": "fea6",
+      "descricao": "Jantar",
+      "valor": 850,
+      "categoria": "Alimentação"
+    },
+    {
+      "id": "beb1",
+      "descricao": "Unimed",
+      "valor": 900,
+      "categoria": "Saúde"
+    },
+    {
+      "descricao": "IPVA",
+      "valor": 3850,
+      "categoria": "Transporte",
+      "id": "101e"
+    }
+  ]
+}

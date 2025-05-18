@@ -1,0 +1,151 @@
+/* Importa fontes e ícones */
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cal Sans', sans-serif;
+    background: linear-gradient(135deg, #121212, #1F1F1F);
+    color: #f0f0f0;
+    padding: 30px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Formulário */
+form {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+form input::placeholder {
+    color: #aaa;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #6C63FF;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+form button:hover {
+    background-color: #5a54d1;
+    transform: scale(1.02);
+}
+
+/* Lista de despesas */
+#lista-despesas {
+    list-style: none;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#lista-despesas li {
+    background: #2a2a2a;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 0.4s ease forwards;
+}
+
+#lista-despesas li i {
+    margin-left: 10px;
+    color: #ff5f7e;
+}
+
+/* Total */
+#total {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Histórico */
+#historico-categorias {
+    margin-top: 20px;
+    color: #ddd;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 15px;
+    }
+}
+#lista-despesas li button {
+  background: none;
+  border: none;
+  color: #fff;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+#lista-despesas li button:hover {
+  transform: scale(1.2);
+}

@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Controle de Despesas</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-wEWOVuLPKYp+dLzwE9JEr77VjBjUyN06uhfGNIVDsTnK5M5dAQrsr8aUtWvRIGZ5kvlzyJLM+MKUeAzG7n2BzA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Controle de Despesas</h1>
+
+        <form id="form-despesa">
+            <input type="text" id="descricao" placeholder="Descrição" required />
+            <input type="number" id="valor" placeholder="Valor" required step="0.01" min="0"/>
+            <select id="categoria" required>
+                <option value="">Categoria</option>
+                <option value="Alimentação">Alimentação</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Saúde">Saúde</option>
+                <option value="Lazer">Lazer</option>
+                <option value="Cartões de Crédito">Cartões de Crédito</option>
+                <option value="Outros">Outros</option>
+            </select>
+            <button type="submit">Adicionar</button>
+            <button id="btn-historico" type="button">Ver Histórico por Categoria</button>
+        </form>
+
+        <div id="historico-categorias"></div>
+
+        <ul id="lista-despesas"></ul>
+
+        <div id="total"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
